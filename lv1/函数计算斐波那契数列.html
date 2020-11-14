@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //斐波那契数列:F(0)=0，F(1)=1, F(n)=F(n - 1)+F(n - 2)（n ≥ 2，n ∈ N*）
+        function Fibonacci(n) {
+            if (n == 0) {
+                return 0;
+            }
+            if (n == 1) {
+                return 1;
+            } else {
+                return Fibonacci(n - 2) + Fibonacci(n - 1);
+            }
+        }
+        //斐波那契数列：0、1、1、2、3、5、8、13、21、34、……
+        for (var i = 0; i <= 20; i++) {
+            console.log(Fibonacci(i));
+        }
+    </script>
+</body>
+
+</html>

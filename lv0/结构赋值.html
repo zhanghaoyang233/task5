@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: 'Boson',
+            age: 20,
+            address: {
+                city: 'Chongqing',
+                area: 'Nanan'
+            }
+        }
+
+        // 通过解构赋值的方式获取对象中所有属性
+        let {
+            name,
+            age,
+            address
+        } = person;
+
+        /*--------------------------------------------*/
+        let node = {
+            loc: {
+                start: {
+                    line: 1,
+                    column: 5
+                }
+            }
+        };
+        let {
+            loc: {
+                start: {
+                    line,
+                    column
+                }
+            }
+        } = node; // 同样，这里loc、start是需要匹配的键，真正赋值的是line
+    </script>
+</body>
+
+</html>
